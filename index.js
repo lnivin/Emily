@@ -26,7 +26,7 @@ app.use(passport.session());
 // Defino las rutas, primero van las de autenticacion.
 authRoutes(app);
 app.get('/', (req, res) => {
-  res.send({ hi: "there4" });
+  res.redirect('/');
 });
 
 app.get('/auth/google', passport.authenticate('google', {
